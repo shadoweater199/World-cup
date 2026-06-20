@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>World Cup Pronostics — Play with friends</title>
+  <link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+  <main class="container">
+    <h1>World Cup Pronostics</h1>
+
+    <section id="controls" class="card">
+      <label>Pool name: <input id="poolName" placeholder="e.g. Weekend Cup" /></label>
+      <label>Your player name: <input id="playerName" placeholder="your name" /></label>
+      <div class="row">
+        <button id="addMatchBtn">Add match</button>
+        <button id="loadSampleBtn">Load sample matches</button>
+        <button id="exportBtn">Generate share code</button>
+        <button id="importBtn">Import from code</button>
+      </div>
+      <p class="hint">Share the generated short code or URL with friends on WhatsApp — they can paste it back in Import or open the link to join the same pool.</p>
+    </section>
+
+    <section id="matches" class="card">
+      <h2>Matches</h2>
+      <div id="matchesList"></div>
+    </section>
+
+    <section id="players" class="card">
+      <h2>Players & Predictions</h2>
+      <div id="playersList"></div>
+    </section>
+
+    <section id="share" class="card">
+      <h2>Share / Import</h2>
+      <textarea id="shareCode" placeholder="Generated code will appear here" rows="3"></textarea>
+      <div class="row">
+        <button id="copyCodeBtn">Copy code</button>
+        <button id="openLinkBtn">Open share link</button>
+        <button id="clearBtn">Clear data</button>
+      </div>
+    </section>
+
+    <footer>
+      <small>Static single-page app — no server required. Data is encoded in the share code / URL hash.</small>
+    </footer>
+  </main>
+
+  <script src="assets/app.js"></script>
+</body>
+</html>
