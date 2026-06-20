@@ -1,0 +1,32 @@
+/* Simple responsive styles for World Cup Pronostics */
+:root{
+  --bg:#f7f7fb;
+  --card:#fff;
+  --muted:#6b7280;
+  --accent:#1f6feb;
+  --radius:10px;
+  --gap:12px;
+  font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+}
+*{box-sizing:border-box}
+html,body{height:100%;margin:0;background:var(--bg);color:#0f1724}
+.container{max-width:980px;margin:28px auto;padding:20px}
+h1{margin:0 0 8px;font-size:1.6rem}
+.card{background:var(--card);padding:14px;border-radius:var(--radius);box-shadow:0 6px 18px rgba(16,24,40,0.06);margin-bottom:14px}
+.row{display:flex;gap:8px;flex-wrap:wrap;margin-top:8px}
+input,textarea,select,button{font:inherit}
+input,textarea,select{padding:8px;border:1px solid #e6e9ef;border-radius:8px;min-width:0}
+button{background:var(--accent);color:white;border:none;padding:8px 12px;border-radius:8px;cursor:pointer}
+button.ghost{background:#eef2ff;color:var(--accent)}
+.hint{color:var(--muted);font-size:0.9rem;margin-top:8px}
+#matchesList .match{display:flex;gap:8px;align-items:center;margin:8px 0}
+.match .teams{flex:1;display:flex;gap:8px;align-items:center}
+.match input.score{width:56px;text-align:center}
+.small{font-size:0.9rem;color:var(--muted)}
+footer{margin-top:8px;text-align:center;color:var(--muted);font-size:0.85rem}
+.players-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:10px}
+.player-card{border:1px dashed #eef2ff;padding:8px;border-radius:8px;background:#fbfdff}
+.code-area{width:100%;padding:8px;border-radius:8px;border:1px solid #e6e9ef;font-family:monospace}
+@media (max-width:520px){
+  .row{flex-direction:column}
+}
